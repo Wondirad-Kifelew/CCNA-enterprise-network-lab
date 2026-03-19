@@ -38,13 +38,13 @@ VLANs are used to segment the network for better organization, performance, and 
 Multilayer switches at the distribution layer handle inter-VLAN routing and act as the default gateway for all VLANs using SVIs.
 This allows devices in different VLANs to communicate without relying on an external router.
 
-![Insert SVI configuration screenshot]
-![Insert routing table screenshot]
+![alt text](./images/inter-vlan_routing_proof.jpg)
 # Layer 2 Technologies
 
 ## Trunk Links
 
 Trunk links are configured between access and distribution switches, allowing all VLANs to traverse a single link.
+![alt text](./images/trunk_links_img.jpg)
 
 ## VTP
 
@@ -62,9 +62,9 @@ Rapid Spanning Tree Protocol is used to prevent Layer 2 loops. DSW1 is configure
 - **Layer 2 EtherChannel:** between distribution switches.
 - **Layer 3 EtherChannel:** between core switches.
 - EtherChannel improves bandwidth and provides redundancy.
-
-![EtherChannel screenshot]
-![STP root bridge screenshot]
+  
+Key: Layer2 ether channel⚫️ Layer 3 ether channels🔴
+![alt text](./images/Layer2_and_layer3_Etherchannels.jpg)
 
 # Routing
 
@@ -78,13 +78,11 @@ OSPF is enabled across:
 - Router
 This allows automatic route exchange and scalability.
 
-![OSPF neighbors screenshot]
-![Routing table screenshot]
+![alt text](./images/OSPF_sample.jpg)
 
 ## IPv6
 IPv6 addressing and routing are configured on the router and core switches to demonstrate dual-stack networking.
 
-![IPv6 routing screenshot]
 
 # Security
 
@@ -95,19 +93,16 @@ Configured on access ports to restrict unauthorized devices based on MAC address
 Prevents rogue DHCP servers and includes rate limiting to mitigate DHCP starvation attacks.
 ### Dynamic ARP Inspection 
 Protects against ARP spoofing and poisoning attacks.
- 
-![Port security screenshot]
+
  
 ## Layer 3 Security 
 ### Extended ACLs 
 to control traffic between networks. Example: ICMP (ping) from Office A PCs to Office B PCs is denied. All other traffic is allowed.
  
-d![ACL config screenshot]
-d![Ping test screenshot]
- 
 # Network Services 
 ### DHCP 
 rRouter1 acts as the DHCP server. Address pools are created for all VLANs. First 10 addresses in each subnet are reserved. Distribution switches act as DHCP relay agents.
+ ![alt text](./images/dhcp_ip_binding_table.jpg)
 ### DNS 
 a DNS server is configured in VLAN 30 (Office B) with A records and a CNAME for testing.
 ### Syslog 
@@ -117,15 +112,17 @@ d!Insert screenshots where indicated.
 
 ## SSH
 
-SSH is configured on all devices and restricted to PCs in VLAN 10 (Office A).
+SSH is configured on all devices and given access to only PCs in VLAN 10 (Office A).
+SSH allowed PC example: I used allowed VLAN 10 PCs in Office A
+ ![alt text](./images/SSH_authorised.jpg)
+SSH from denied subnet example: I tried to SSH from PCs in Office B
+![alt text](./images/SSH_access_denied.jpg)
+
 
 ## FTP
 
 An FTP server in VLAN 30 is used to transfer IOS images to Router1.
 
-![Insert SSH access screenshot]
-
-![Insert FTP transfer screenshot]
 
 ## NAT
 
@@ -134,5 +131,8 @@ Maps an internal server address to a public IP address.
 
 ### Dynamic NAT (PAT)
 Allows multiple internal devices to share a limited number of public IP addresses using port translation.
+Here an example shows the PAT translation table
+
+![alt text](./images/PAT_translations.jpg)
 
 ![Insert NAT table screenshot]
