@@ -10,6 +10,12 @@ This project is a comprehensive CCNA-level lab designed to simulate an enterpris
 
 Technologies covered include VLANs, multilayer switching, trunking, VTP, spanning tree (RSTP, PortFast, BPDU Guard), EtherChannel (Layer 2 and Layer 3), static and dynamic routing (OSPF), IPv6, ACLs, NAT, DHCP, DNS, Syslog, SSH, FTP, and network security mechanisms.
 
+# How to Use This Lab
+
+Load `CCNA_enterprise_network_lab.pkt` in Cisco Packet Tracer to view and interact with the complete enterprise network simulation.
+
+Refer to *IPv4 Addressing - Sheet1.pdf* for detailed subnetting and VLAN IP assignments used in the lab.
+
 ## Network Design
 
 The network is divided into two offices (Office A and Office B) using a hierarchical design:
