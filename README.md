@@ -2,7 +2,7 @@
 
 ## Topology
 
-![Insert topology image here]
+![alt text](./images/topology_img)
 
 ## Project Overview
 
