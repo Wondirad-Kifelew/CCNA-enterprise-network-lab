@@ -116,6 +116,7 @@ d!Insert screenshots where indicated.
 
 SSH is configured on all devices and given access to only PCs in VLAN 10 (Office A).
 SSH allowed PC example: I used allowed VLAN 10 PCs in Office A
+
  ![alt text](./images/ssh_authorised.jpg)
  
 SSH from denied subnet example: I tried to SSH from PCs in Office B
