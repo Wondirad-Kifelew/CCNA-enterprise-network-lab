@@ -63,7 +63,7 @@ Rapid Spanning Tree Protocol is used to prevent Layer 2 loops. DSW1 is configure
 - **Layer 3 EtherChannel:** between core switches.
 - EtherChannel improves bandwidth and provides redundancy.
   
-Key: Layer2 ether channel⚫️ Layer 3 ether channels🔴
+Key: Layer 2 ether channels🔴 Layer3 ether channel⚫️ 
 ![alt text](./images/Layer2_and_layer3_Etherchannels.jpg)
 
 # Routing
