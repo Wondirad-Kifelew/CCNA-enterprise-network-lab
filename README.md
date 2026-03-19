@@ -103,6 +103,7 @@ to control traffic between networks. Example: ICMP (ping) from Office A PCs to O
 ### DHCP 
 rRouter1 acts as the DHCP server. Address pools are created for all VLANs. First 10 addresses in each subnet are reserved. Distribution switches act as DHCP relay agents.
  ![alt text](./images/dhcp_ip_binding_table.jpg)
+ 
 ### DNS 
 a DNS server is configured in VLAN 30 (Office B) with A records and a CNAME for testing.
 ### Syslog 
@@ -115,6 +116,7 @@ d!Insert screenshots where indicated.
 SSH is configured on all devices and given access to only PCs in VLAN 10 (Office A).
 SSH allowed PC example: I used allowed VLAN 10 PCs in Office A
  ![alt text](./images/ssh_authorised.jpg)
+ 
 SSH from denied subnet example: I tried to SSH from PCs in Office B
 ![alt text](./images/ssh_access_denied.jpg)
 
