@@ -1,4 +1,4 @@
-# CCNA Mega Lab
+# CCNA Enterprise Network Lab
 
 ## Topology
 
