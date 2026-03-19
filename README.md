@@ -131,8 +131,7 @@ Maps an internal server address to a public IP address.
 
 ### Dynamic NAT (PAT)
 Allows multiple internal devices to share a limited number of public IP addresses using port translation.
-Here an example shows the PAT translation table
+Here an example shows sample PAT translation table
 
 ![alt text](./images/PAT_translations.jpg)
 
-![Insert NAT table screenshot]
