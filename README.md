@@ -18,7 +18,6 @@ The network is divided into two offices (Office A and Office B) using a hierarch
 - Core layer (core switches)
 - Router for external connectivity
 
-![Insert logical diagram screenshot]
 
 ## VLAN Design
 ### Office A
@@ -30,9 +29,8 @@ The network is divided into two offices (Office A and Office B) using a hierarch
 - VLAN 20: Voice
 - VLAN 30: Servers
 - VLAN 99: Management
-VLANs are used to segment the network for better organization, performance, and security.
+VLANs are used to segment the network for better organization and security.
 
-![Insert VLAN table screenshot]
 
 ## Multilayer Switching
 Multilayer switches at the distribution layer handle inter-VLAN routing and act as the default gateway for all VLANs using SVIs.
@@ -43,7 +41,7 @@ This allows devices in different VLANs to communicate without relying on an exte
 
 ## Trunk Links
 
-Trunk links are configured between access and distribution switches, allowing all VLANs to traverse a single link.
+Trunk links are configured between the access and distribution switches, allowing all VLANs to traverse a single link.
 ![alt text](./images/trunk_links_img.jpg)
 
 ## VTP
@@ -53,6 +51,12 @@ VTP is configured with DSW1 as the server in both offices to propagate VLAN conf
 ## Spanning Tree (RSTP)
 
 Rapid Spanning Tree Protocol is used to prevent Layer 2 loops. DSW1 is configured as the root bridge in both offices.
+
+## HSRP (Hot Standby Router Protocol)
+
+Configured on distribution and core switches to provide gateway redundancy. One switch acts as the active router while the other is standby, ensuring uninterrupted inter-VLAN connectivity if one switch fails. 
+I have also synchronised active HSRP Layer 3 switches to root bridges so network traffic should'nt take longer paths. 
+
 
 ## PortFast and BPDU Guard
 - **PortFast** is enabled on access ports for faster device connectivity.
@@ -101,7 +105,7 @@ to control traffic between networks. Example: ICMP (ping) from Office A PCs to O
  
 # Network Services 
 ### DHCP 
-rRouter1 acts as the DHCP server. Address pools are created for all VLANs. First 10 addresses in each subnet are reserved. Distribution switches act as DHCP relay agents.
+Router1 acts as the DHCP server. Address pools are created for all VLANs. First 10 addresses in each subnet are reserved. Distribution switches act as DHCP relay agents.
 
  ![alt text](./images/dhcp_ip_binding_table.jpg)
  
@@ -109,7 +113,7 @@ rRouter1 acts as the DHCP server. Address pools are created for all VLANs. First
 a DNS server is configured in VLAN 30 (Office B) with A records and a CNAME for testing.
 ### Syslog 
 device send log messages to the Syslog server located in VLAN 30 (Office B).
-d!Insert screenshots where indicated.
+
 # Remote Access and File Transfer
 
 ## SSH
@@ -125,7 +129,7 @@ SSH from denied subnet example: I tried to SSH from PCs in Office B
 
 ## FTP
 
-An FTP server in VLAN 30 is used to transfer IOS images to Router1.
+An FTP server in VLAN 30 was used to transfer IOS images to Router1.
 
 
 ## NAT
