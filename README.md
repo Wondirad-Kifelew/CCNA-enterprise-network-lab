@@ -87,7 +87,7 @@ OSPF is enabled across:
 - Distribution switches
 - Core switches
 - Router
-This allows automatic route exchange and scalability.
+This allows automatic route exchange and scalability. Below you can see an example dynamic route table taken from Router1
 
 ![alt text](./images/OSPF_sample.jpg)
 
