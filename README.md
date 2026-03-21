@@ -112,10 +112,10 @@ to control traffic between networks. Example: ICMP (ping) from Office A PCs to O
  
 # Network Services 
 ### DHCP 
---Router1 acts as the DHCP server. 
---Address pools are created for all VLANs. 
---First 10 addresses in each subnet are reserved.
---Distribution switches act as DHCP relay agents.
+- Router1 acts as the DHCP server. 
+- Address pools are created for all VLANs. 
+- First 10 addresses in each subnet are reserved.
+- Distribution switches act as DHCP relay agents.
 
  ![alt text](./images/dhcp_ip_binding_table.jpg)
  
