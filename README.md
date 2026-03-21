@@ -41,7 +41,7 @@ VLANs are used to segment the network for better organization and security.
 
 ## Multilayer Switching
 Multilayer switches at the distribution layer handle inter-VLAN routing and act as the default gateway for all VLANs using SVIs.
-This allows devices in different VLANs to communicate without relying on an external router.
+This allows devices in different VLANs to communicate without relying on an external router. As you can see below the PC() is in a different subnet from both 10.5.0.
 
 ![alt text](./images/inter-vlan_routing_proof.jpg)
 # Layer 2 Technologies
