@@ -8,7 +8,7 @@
 
 This project is a comprehensive CCNA-level lab designed to simulate an enterprise network across two offices. It integrates multiple Layer 2 and Layer 3 technologies along with network services and security features.
 
-Technologies covered include VLANs, multilayer switching, trunking, VTP, spanning tree (RSTP, PortFast, BPDU Guard), EtherChannel (Layer 2 and Layer 3), static and dynamic routing (OSPF), IPv6, ACLs, NAT, DHCP, DNS, Syslog, SSH, FTP, and network security mechanisms.
+Technologies covered include VLANs, multilayer switching, trunking, VTP, spanning tree (RSTP, PortFast, BPDU Guard), EtherChannel (Layer 2 and Layer 3), static and dynamic routing (OSPF), IPv6, ACLs, NAT, DHCP, DNS, Syslog, SSH, FTP, and network security mechanisms(Layer 2 and Layer 3)
 
 ## How to Use This Lab
 
