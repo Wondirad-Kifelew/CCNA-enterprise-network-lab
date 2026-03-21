@@ -35,6 +35,7 @@ The network is divided into two offices (Office A and Office B) using a hierarch
 - VLAN 20: Voice
 - VLAN 30: Servers
 - VLAN 99: Management
+
 VLANs are used to segment the network for better organization and security.
 
 
